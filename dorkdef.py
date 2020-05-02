@@ -102,8 +102,8 @@ class dork:
                     if 'low' in Impact.lower():
                         Impacts = "\033[1;32;40mlow\033[0m"
                             
-                    resultone = "[#] Found: " + j.link.encode('UTF-8')  + "\nImpact: " + Impact + "Description: " + Description + "\n"# without color, (log)   
-                    resultones = "[#] Found: " + j.link.encode('UTF-8')  + "\nImpact: " + Impacts  + "\n" + "Description: " + Description #with color, (terminal), the diference between resultone and resultones is Impact variable, with color and colorblind
+                    resultone = "[#] Found: " + str(j.link.encode('UTF-8'))  + "\nImpact: " + Impact + "Description: " + Description + "\n"# without color, (log)   
+                    resultones = "[#] Found: " + str(j.link.encode('UTF-8'))  + "\nImpact: " + Impacts  + "\n" + "Description: " + Description #with color, (terminal), the diference between resultone and resultones is Impact variable, with color and colorblind
  
                     print(resultones) #print results
                     with open(name_file, 'a') as report_file:
